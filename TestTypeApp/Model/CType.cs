@@ -7,6 +7,7 @@ using TestTypeApp.Tools.ExtensionMethods;
 
 namespace TestTypeApp.Model
 {
+    //test
    public class CType : Transportable<socksType>, INotifyPropertyChanged 
     {
         public CType() : base(new socksType())
