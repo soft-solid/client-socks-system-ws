@@ -7,13 +7,13 @@ using TestTypeApp.View;
 
 namespace TestTypeApp.Presenter
 {
-    class TypePresenter : IPresenter
+    class MaterialPresenter :IPresenter
     {
-        private IBaseRepositoryModel<CType> _repositoryModel;
-        private IItemView<CType> _view;
+        private IBaseRepositoryModel<CMaterial> _repositoryModel;
+        private IItemView<CMaterial> _view;
         private int _currentID;
 
-        public TypePresenter(IBaseRepositoryModel<CType> repositoryModel, IItemView<CType> view)
+        public MaterialPresenter(IBaseRepositoryModel<CMaterial> repositoryModel, IItemView<CMaterial> view)
         {
             this._repositoryModel = repositoryModel;
             this._view = view;

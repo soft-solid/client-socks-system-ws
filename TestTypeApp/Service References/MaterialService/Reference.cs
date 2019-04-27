@@ -18,49 +18,60 @@ namespace TestTypeApp.MaterialService {
         // CODEGEN: Parameter 'arg0' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TestTypeApp.MaterialService.saveResponse save(TestTypeApp.MaterialService.save request);
+        TestTypeApp.MaterialService.DeactivateResponse Deactivate(TestTypeApp.MaterialService.Deactivate request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.saveResponse> saveAsync(TestTypeApp.MaterialService.save request);
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.DeactivateResponse> DeactivateAsync(TestTypeApp.MaterialService.Deactivate request);
+        
+        // CODEGEN: Parameter '_return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="_return")]
+        TestTypeApp.MaterialService.SaveResponse Save(TestTypeApp.MaterialService.Save request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.SaveResponse> SaveAsync(TestTypeApp.MaterialService.Save request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.MaterialService.readResponse read(TestTypeApp.MaterialService.read request);
+        TestTypeApp.MaterialService.ReadAllResponse ReadAll(TestTypeApp.MaterialService.ReadAll request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.readResponse> readAsync(TestTypeApp.MaterialService.read request);
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.ReadAllResponse> ReadAllAsync(TestTypeApp.MaterialService.ReadAll request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Deactivate", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Deactivate {
         
-        // CODEGEN: Parameter 'arg0' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        TestTypeApp.MaterialService.deleteResponse delete(TestTypeApp.MaterialService.delete request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int[] arg0;
         
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.deleteResponse> deleteAsync(TestTypeApp.MaterialService.delete request);
+        public Deactivate() {
+        }
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.MaterialService.findResponse find(TestTypeApp.MaterialService.find request);
+        public Deactivate(int[] arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeactivateResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class DeactivateResponse {
         
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.findResponse> findAsync(TestTypeApp.MaterialService.find request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.MaterialService.readAllResponse readAll(TestTypeApp.MaterialService.readAll request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.readAllResponse> readAllAsync(TestTypeApp.MaterialService.readAll request);
+        public DeactivateResponse() {
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -119,20 +130,80 @@ namespace TestTypeApp.MaterialService {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://soap.web.courses.org/")]
+    public partial class SaveResponseEntry : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string keyField;
+        
+        private int valueField;
+        
+        private bool valueFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+                this.RaisePropertyChanged("key");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+                this.RaisePropertyChanged("value");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool valueSpecified {
+            get {
+                return this.valueFieldSpecified;
+            }
+            set {
+                this.valueFieldSpecified = value;
+                this.RaisePropertyChanged("valueSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="save", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class save {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Save", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Save {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public TestTypeApp.MaterialService.material[] arg0;
         
-        public save() {
+        public Save() {
         }
         
-        public save(TestTypeApp.MaterialService.material[] arg0) {
+        public Save(TestTypeApp.MaterialService.material[] arg0) {
             this.arg0 = arg0;
         }
     }
@@ -140,137 +211,46 @@ namespace TestTypeApp.MaterialService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class saveResponse {
-        
-        public saveResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="read", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class read {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class SaveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlArrayItemAttribute("entry", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
+        public TestTypeApp.MaterialService.SaveResponseEntry[] _return;
         
-        public read() {
+        public SaveResponse() {
         }
         
-        public read(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TestTypeApp.MaterialService.material @return;
-        
-        public readResponse() {
-        }
-        
-        public readResponse(TestTypeApp.MaterialService.material @return) {
-            this.@return = @return;
+        public SaveResponse(TestTypeApp.MaterialService.SaveResponseEntry[] _return) {
+            this._return = _return;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delete", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class delete {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class ReadAll {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public delete() {
-        }
-        
-        public delete(int arg0) {
-            this.arg0 = arg0;
+        public ReadAll() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class deleteResponse {
-        
-        public deleteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="find", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class find {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public find() {
-        }
-        
-        public find(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class findResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAllResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class ReadAllResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public TestTypeApp.MaterialService.material[] @return;
         
-        public findResponse() {
+        public ReadAllResponse() {
         }
         
-        public findResponse(TestTypeApp.MaterialService.material[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readAll {
-        
-        public readAll() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readAllResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readAllResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TestTypeApp.MaterialService.material[] @return;
-        
-        public readAllResponse() {
-        }
-        
-        public readAllResponse(TestTypeApp.MaterialService.material[] @return) {
+        public ReadAllResponse(TestTypeApp.MaterialService.material[] @return) {
             this.@return = @return;
         }
     }
@@ -303,114 +283,69 @@ namespace TestTypeApp.MaterialService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.MaterialService.saveResponse TestTypeApp.MaterialService.MaterialService.save(TestTypeApp.MaterialService.save request) {
-            return base.Channel.save(request);
+        TestTypeApp.MaterialService.DeactivateResponse TestTypeApp.MaterialService.MaterialService.Deactivate(TestTypeApp.MaterialService.Deactivate request) {
+            return base.Channel.Deactivate(request);
         }
         
-        public void save(TestTypeApp.MaterialService.material[] arg0) {
-            TestTypeApp.MaterialService.save inValue = new TestTypeApp.MaterialService.save();
+        public void Deactivate(int[] arg0) {
+            TestTypeApp.MaterialService.Deactivate inValue = new TestTypeApp.MaterialService.Deactivate();
             inValue.arg0 = arg0;
-            TestTypeApp.MaterialService.saveResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).save(inValue);
+            TestTypeApp.MaterialService.DeactivateResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).Deactivate(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.saveResponse> TestTypeApp.MaterialService.MaterialService.saveAsync(TestTypeApp.MaterialService.save request) {
-            return base.Channel.saveAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.DeactivateResponse> TestTypeApp.MaterialService.MaterialService.DeactivateAsync(TestTypeApp.MaterialService.Deactivate request) {
+            return base.Channel.DeactivateAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.saveResponse> saveAsync(TestTypeApp.MaterialService.material[] arg0) {
-            TestTypeApp.MaterialService.save inValue = new TestTypeApp.MaterialService.save();
+        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.DeactivateResponse> DeactivateAsync(int[] arg0) {
+            TestTypeApp.MaterialService.Deactivate inValue = new TestTypeApp.MaterialService.Deactivate();
             inValue.arg0 = arg0;
-            return ((TestTypeApp.MaterialService.MaterialService)(this)).saveAsync(inValue);
+            return ((TestTypeApp.MaterialService.MaterialService)(this)).DeactivateAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.MaterialService.readResponse TestTypeApp.MaterialService.MaterialService.read(TestTypeApp.MaterialService.read request) {
-            return base.Channel.read(request);
+        TestTypeApp.MaterialService.SaveResponse TestTypeApp.MaterialService.MaterialService.Save(TestTypeApp.MaterialService.Save request) {
+            return base.Channel.Save(request);
         }
         
-        public TestTypeApp.MaterialService.material read(int arg0) {
-            TestTypeApp.MaterialService.read inValue = new TestTypeApp.MaterialService.read();
+        public TestTypeApp.MaterialService.SaveResponseEntry[] Save(TestTypeApp.MaterialService.material[] arg0) {
+            TestTypeApp.MaterialService.Save inValue = new TestTypeApp.MaterialService.Save();
             inValue.arg0 = arg0;
-            TestTypeApp.MaterialService.readResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).read(inValue);
+            TestTypeApp.MaterialService.SaveResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).Save(inValue);
+            return retVal._return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.SaveResponse> TestTypeApp.MaterialService.MaterialService.SaveAsync(TestTypeApp.MaterialService.Save request) {
+            return base.Channel.SaveAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.SaveResponse> SaveAsync(TestTypeApp.MaterialService.material[] arg0) {
+            TestTypeApp.MaterialService.Save inValue = new TestTypeApp.MaterialService.Save();
+            inValue.arg0 = arg0;
+            return ((TestTypeApp.MaterialService.MaterialService)(this)).SaveAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TestTypeApp.MaterialService.ReadAllResponse TestTypeApp.MaterialService.MaterialService.ReadAll(TestTypeApp.MaterialService.ReadAll request) {
+            return base.Channel.ReadAll(request);
+        }
+        
+        public TestTypeApp.MaterialService.material[] ReadAll() {
+            TestTypeApp.MaterialService.ReadAll inValue = new TestTypeApp.MaterialService.ReadAll();
+            TestTypeApp.MaterialService.ReadAllResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).ReadAll(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.readResponse> TestTypeApp.MaterialService.MaterialService.readAsync(TestTypeApp.MaterialService.read request) {
-            return base.Channel.readAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.MaterialService.ReadAllResponse> TestTypeApp.MaterialService.MaterialService.ReadAllAsync(TestTypeApp.MaterialService.ReadAll request) {
+            return base.Channel.ReadAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.readResponse> readAsync(int arg0) {
-            TestTypeApp.MaterialService.read inValue = new TestTypeApp.MaterialService.read();
-            inValue.arg0 = arg0;
-            return ((TestTypeApp.MaterialService.MaterialService)(this)).readAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.MaterialService.deleteResponse TestTypeApp.MaterialService.MaterialService.delete(TestTypeApp.MaterialService.delete request) {
-            return base.Channel.delete(request);
-        }
-        
-        public void delete(int arg0) {
-            TestTypeApp.MaterialService.delete inValue = new TestTypeApp.MaterialService.delete();
-            inValue.arg0 = arg0;
-            TestTypeApp.MaterialService.deleteResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).delete(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.deleteResponse> TestTypeApp.MaterialService.MaterialService.deleteAsync(TestTypeApp.MaterialService.delete request) {
-            return base.Channel.deleteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.deleteResponse> deleteAsync(int arg0) {
-            TestTypeApp.MaterialService.delete inValue = new TestTypeApp.MaterialService.delete();
-            inValue.arg0 = arg0;
-            return ((TestTypeApp.MaterialService.MaterialService)(this)).deleteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.MaterialService.findResponse TestTypeApp.MaterialService.MaterialService.find(TestTypeApp.MaterialService.find request) {
-            return base.Channel.find(request);
-        }
-        
-        public TestTypeApp.MaterialService.material[] find(string arg0) {
-            TestTypeApp.MaterialService.find inValue = new TestTypeApp.MaterialService.find();
-            inValue.arg0 = arg0;
-            TestTypeApp.MaterialService.findResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).find(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.findResponse> TestTypeApp.MaterialService.MaterialService.findAsync(TestTypeApp.MaterialService.find request) {
-            return base.Channel.findAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.findResponse> findAsync(string arg0) {
-            TestTypeApp.MaterialService.find inValue = new TestTypeApp.MaterialService.find();
-            inValue.arg0 = arg0;
-            return ((TestTypeApp.MaterialService.MaterialService)(this)).findAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.MaterialService.readAllResponse TestTypeApp.MaterialService.MaterialService.readAll(TestTypeApp.MaterialService.readAll request) {
-            return base.Channel.readAll(request);
-        }
-        
-        public TestTypeApp.MaterialService.material[] readAll() {
-            TestTypeApp.MaterialService.readAll inValue = new TestTypeApp.MaterialService.readAll();
-            TestTypeApp.MaterialService.readAllResponse retVal = ((TestTypeApp.MaterialService.MaterialService)(this)).readAll(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.MaterialService.readAllResponse> TestTypeApp.MaterialService.MaterialService.readAllAsync(TestTypeApp.MaterialService.readAll request) {
-            return base.Channel.readAllAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.readAllResponse> readAllAsync() {
-            TestTypeApp.MaterialService.readAll inValue = new TestTypeApp.MaterialService.readAll();
-            return ((TestTypeApp.MaterialService.MaterialService)(this)).readAllAsync(inValue);
+        public System.Threading.Tasks.Task<TestTypeApp.MaterialService.ReadAllResponse> ReadAllAsync() {
+            TestTypeApp.MaterialService.ReadAll inValue = new TestTypeApp.MaterialService.ReadAll();
+            return ((TestTypeApp.MaterialService.MaterialService)(this)).ReadAllAsync(inValue);
         }
     }
 }

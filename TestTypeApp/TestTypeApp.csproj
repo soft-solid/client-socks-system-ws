@@ -96,6 +96,7 @@
     <Compile Include="Client\IConverter.cs" />
     <Compile Include="Factories\Interfaces\IPresenterFactory.cs" />
     <Compile Include="Factories\PresenterFactory.cs" />
+    <Compile Include="Model\CMaterial.cs" />
     <Compile Include="Model\CType.cs" />
     <Compile Include="Client\ITransportable.cs" />
     <Compile Include="Client\Transportable.cs" />
@@ -107,11 +108,12 @@
     </Compile>
     <Compile Include="Model\CComposition.cs" />
     <Compile Include="Model\CManufacture.cs" />
-    <Compile Include="Model\CMaterial.cs" />
     <Compile Include="Model\CSocks.cs" />
     <Compile Include="Model\Repository\CTypeRepository.cs" />
     <Compile Include="Model\Repository\IBaseRepositoryModel.cs" />
     <Compile Include="Presenter\IPresenter.cs" />
+    <Compile Include="Presenter\ManufacturePresenter.cs" />
+    <Compile Include="Presenter\MaterialPresenter.cs" />
     <Compile Include="Presenter\TypePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +139,8 @@
     </Compile>
     <Compile Include="Tools\CustomBindingList\BindingListWithDeleteDetecting.cs" />
     <Compile Include="Tools\CustomBindingList\RemoveItemEventArgs.cs" />
+    <Compile Include="Tools\Loggers\CManufactureLogger.cs" />
+    <Compile Include="Tools\Loggers\CMaterialLogger.cs" />
     <Compile Include="View\Entries\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,41 +218,35 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Service References\ManufactureService\ManufactureService1.wsdl" />
-    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.deleteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.findResponse.datasource">
+    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.DeactivateResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.manufacture.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.readAllResponse.datasource">
+    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.ReadAllResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.readResponse.datasource">
+    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.SaveResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.saveResponse.datasource">
+    <None Include="Service References\ManufactureService\TestTypeApp.ManufactureService.SaveResponseEntry.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MaterialService\MaterialService1.wsdl" />
-    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.deleteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.findResponse.datasource">
+    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.DeactivateResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\MaterialService\TestTypeApp.MaterialService.material.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.readAllResponse.datasource">
+    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.ReadAllResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.readResponse.datasource">
+    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.SaveResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.saveResponse.datasource">
+    <None Include="Service References\MaterialService\TestTypeApp.MaterialService.SaveResponseEntry.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SocksService\SocksService.wsdl" />

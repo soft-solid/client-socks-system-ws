@@ -1,14 +1,52 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using TestTypeApp.Client;
+using TestTypeApp.ManufactureService;
+using TestTypeApp.Tools.Loggers;
+using TestTypeApp.Tools.ExtensionMethods;
 
 namespace TestTypeApp.Model
 {
-    class CManufacture
+    class CManufacture : Transportable<manufacture>, INotifyPropertyChanged 
     {
-        private int id;
-        private string name;
+        public CManufacture()
+            : base(new manufacture())
+        {
+            Active = true;
+        }
+
+        public CManufacture(manufacture manufacture) : base(manufacture) { }
+
+        public int Id
+        {
+            get { return dto.id; }
+            set { dto.id = value; }
+        }
+
+        public bool Active
+        {
+            get { return dto.active; }
+            set { dto.active = value; }
+        }
+
+        public string Name
+        {
+            get { return dto.name; }
+            set
+            {
+                dto.name = value;
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Name"));
+                }
+                else
+                {
+                    CManufactureLogger.Instance.Error(this);
+                    throw new NullReferenceException("There is no subscribers!");
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

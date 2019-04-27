@@ -2,17 +2,21 @@
 <wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://soap.web.courses.org/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ManufactureService" targetNamespace="http://soap.web.courses.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xs:schema elementFormDefault="unqualified" targetNamespace="http://soap.web.courses.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-      <xs:element name="delete" type="tns:delete" />
-      <xs:element name="deleteResponse" type="tns:deleteResponse" />
-      <xs:element name="find" type="tns:find" />
-      <xs:element name="findResponse" type="tns:findResponse" />
-      <xs:element name="read" type="tns:read" />
-      <xs:element name="readAll" type="tns:readAll" />
-      <xs:element name="readAllResponse" type="tns:readAllResponse" />
-      <xs:element name="readResponse" type="tns:readResponse" />
-      <xs:element name="save" type="tns:save" />
-      <xs:element name="saveResponse" type="tns:saveResponse" />
-      <xs:complexType name="save">
+      <xs:element name="Deactivate" type="tns:Deactivate" />
+      <xs:element name="DeactivateResponse" type="tns:DeactivateResponse" />
+      <xs:element name="ReadAll" type="tns:ReadAll" />
+      <xs:element name="ReadAllResponse" type="tns:ReadAllResponse" />
+      <xs:element name="Save" type="tns:Save" />
+      <xs:element name="SaveResponse" type="tns:SaveResponse" />
+      <xs:complexType name="Deactivate">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="arg0" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DeactivateResponse">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="Save">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="unbounded" name="arg0" type="tns:manufacture" />
         </xs:sequence>
@@ -24,143 +28,92 @@
           <xs:element minOccurs="0" name="name" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
-      <xs:complexType name="saveResponse">
+      <xs:complexType name="SaveResponse">
+        <xs:sequence>
+          <xs:element name="_return">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="xs:string" />
+                      <xs:element minOccurs="0" name="value" type="xs:int" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReadAll">
         <xs:sequence />
       </xs:complexType>
-      <xs:complexType name="read">
-        <xs:sequence>
-          <xs:element name="arg0" type="xs:int" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="readResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="return" type="tns:manufacture" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="delete">
-        <xs:sequence>
-          <xs:element name="arg0" type="xs:int" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="deleteResponse">
-        <xs:sequence />
-      </xs:complexType>
-      <xs:complexType name="find">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="findResponse">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:manufacture" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="readAll">
-        <xs:sequence />
-      </xs:complexType>
-      <xs:complexType name="readAllResponse">
+      <xs:complexType name="ReadAllResponse">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:manufacture" />
         </xs:sequence>
       </xs:complexType>
     </xs:schema>
   </wsdl:types>
-  <wsdl:message name="readResponse">
-    <wsdl:part name="parameters" element="tns:readResponse" />
+  <wsdl:message name="SaveResponse">
+    <wsdl:part name="parameters" element="tns:SaveResponse" />
   </wsdl:message>
-  <wsdl:message name="readAllResponse">
-    <wsdl:part name="parameters" element="tns:readAllResponse" />
+  <wsdl:message name="DeactivateResponse">
+    <wsdl:part name="parameters" element="tns:DeactivateResponse" />
   </wsdl:message>
-  <wsdl:message name="read">
-    <wsdl:part name="parameters" element="tns:read" />
+  <wsdl:message name="ReadAll">
+    <wsdl:part name="parameters" element="tns:ReadAll" />
   </wsdl:message>
-  <wsdl:message name="deleteResponse">
-    <wsdl:part name="parameters" element="tns:deleteResponse" />
+  <wsdl:message name="Deactivate">
+    <wsdl:part name="parameters" element="tns:Deactivate" />
   </wsdl:message>
-  <wsdl:message name="find">
-    <wsdl:part name="parameters" element="tns:find" />
+  <wsdl:message name="Save">
+    <wsdl:part name="parameters" element="tns:Save" />
   </wsdl:message>
-  <wsdl:message name="save">
-    <wsdl:part name="parameters" element="tns:save" />
-  </wsdl:message>
-  <wsdl:message name="findResponse">
-    <wsdl:part name="parameters" element="tns:findResponse" />
-  </wsdl:message>
-  <wsdl:message name="delete">
-    <wsdl:part name="parameters" element="tns:delete" />
-  </wsdl:message>
-  <wsdl:message name="saveResponse">
-    <wsdl:part name="parameters" element="tns:saveResponse" />
-  </wsdl:message>
-  <wsdl:message name="readAll">
-    <wsdl:part name="parameters" element="tns:readAll" />
+  <wsdl:message name="ReadAllResponse">
+    <wsdl:part name="parameters" element="tns:ReadAllResponse" />
   </wsdl:message>
   <wsdl:portType name="ManufactureService">
-    <wsdl:operation name="save">
-      <wsdl:input name="save" message="tns:save" />
-      <wsdl:output name="saveResponse" message="tns:saveResponse" />
+    <wsdl:operation name="Deactivate">
+      <wsdl:input name="Deactivate" message="tns:Deactivate" />
+      <wsdl:output name="DeactivateResponse" message="tns:DeactivateResponse" />
     </wsdl:operation>
-    <wsdl:operation name="read">
-      <wsdl:input name="read" message="tns:read" />
-      <wsdl:output name="readResponse" message="tns:readResponse" />
+    <wsdl:operation name="Save">
+      <wsdl:input name="Save" message="tns:Save" />
+      <wsdl:output name="SaveResponse" message="tns:SaveResponse" />
     </wsdl:operation>
-    <wsdl:operation name="delete">
-      <wsdl:input name="delete" message="tns:delete" />
-      <wsdl:output name="deleteResponse" message="tns:deleteResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="find">
-      <wsdl:input name="find" message="tns:find" />
-      <wsdl:output name="findResponse" message="tns:findResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="readAll">
-      <wsdl:input name="readAll" message="tns:readAll" />
-      <wsdl:output name="readAllResponse" message="tns:readAllResponse" />
+    <wsdl:operation name="ReadAll">
+      <wsdl:input name="ReadAll" message="tns:ReadAll" />
+      <wsdl:output name="ReadAllResponse" message="tns:ReadAllResponse" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ManufactureServiceSoapBinding" type="tns:ManufactureService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="save">
+    <wsdl:operation name="Deactivate">
       <soap:operation soapAction="" style="document" />
-      <wsdl:input name="save">
+      <wsdl:input name="Deactivate">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="saveResponse">
+      <wsdl:output name="DeactivateResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="read">
+    <wsdl:operation name="Save">
       <soap:operation soapAction="" style="document" />
-      <wsdl:input name="read">
+      <wsdl:input name="Save">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="readResponse">
+      <wsdl:output name="SaveResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="delete">
+    <wsdl:operation name="ReadAll">
       <soap:operation soapAction="" style="document" />
-      <wsdl:input name="delete">
+      <wsdl:input name="ReadAll">
         <soap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="deleteResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="find">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="find">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="findResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="readAll">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="readAll">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="readAllResponse">
+      <wsdl:output name="ReadAllResponse">
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
