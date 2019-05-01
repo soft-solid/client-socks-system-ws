@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using TestTypeApp.Client;
 using TestTypeApp.Model;
 using TestTypeApp.Model.Repository;
 using TestTypeApp.View;

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TestTypeApp.Client;
 using TestTypeApp.Model;
 
 namespace TestTypeApp.View
@@ -19,7 +12,7 @@ namespace TestTypeApp.View
             InitializeComponent();
         }
 
-        private CType _type;
+        CType _type;
 
         public CType DataSource
         {

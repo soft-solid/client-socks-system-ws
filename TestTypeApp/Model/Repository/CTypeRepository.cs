@@ -32,8 +32,9 @@ namespace TestTypeApp.Model.Repository
             {
                 _toSave[_toSave.IndexOf(_types[e.NewIndex])] = _types[e.NewIndex];
             }
-            else if (e.ListChangedType == ListChangedType.ItemAdded ||
-                     !_toSave.Exists(x => x == _types[e.NewIndex]))
+            else if ((e.ListChangedType == ListChangedType.ItemAdded ||
+                     !_toSave.Exists(x => x == _types[e.NewIndex])) &&
+                     e.ListChangedType != ListChangedType.ItemDeleted)
             {
                 _toSave.Add(_types[e.NewIndex]);
             }

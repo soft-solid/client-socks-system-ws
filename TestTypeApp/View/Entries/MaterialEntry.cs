@@ -6,9 +6,9 @@ using TestTypeApp.Model;
 
 namespace TestTypeApp.View.Entries
 {
-    public partial class TypeEntry : Form, IItemView<CType>
+    public partial class MaterialEntry : Form, IItemView<CMaterial>
     {
-        public TypeEntry()
+        public MaterialEntry()
         {
             InitializeComponent();
         }
@@ -17,27 +17,15 @@ namespace TestTypeApp.View.Entries
         public event EventHandler<EventArgs> Save;
         public event EventHandler<EventArgs> AddNew;
 
-        public IList<CType> ItemList
+        public IList<CMaterial> ItemList
         {
-            set { Typegrid.DataSource = value; }
+            set { MaterialGrid.DataSource = value; }
         }
 
-        public CType CurrentItem
+        public CMaterial CurrentItem
         {
-            get { return typeControl.DataSource; }
-            set { typeControl.DataSource = value; }
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            if (RefreshView != null)
-            {
-                RefreshView(this, EventArgs.Empty);
-            }
-            else
-            {
-                //Log this with specific logger!!
-            }
+            get { return materialControl.DataSource; }
+            set { materialControl.DataSource = value; }
         }
 
         private void NewButton_Click(object sender, EventArgs e)
@@ -66,13 +54,26 @@ namespace TestTypeApp.View.Entries
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            TypegridView.DeleteSelectedRows();
-            typeControl.DataSource = (CType)TypegridView.GetRow(TypegridView.FocusedRowHandle);
+            MaterialGridView.DeleteSelectedRows();
+            materialControl.DataSource = (CMaterial)MaterialGridView.GetRow(MaterialGridView.FocusedRowHandle);
+
         }
 
-        private void TypegridView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
-            typeControl.DataSource = (CType)TypegridView.GetRow(e.FocusedRowHandle);
+            if (RefreshView != null)
+            {
+                RefreshView(this, EventArgs.Empty);
+            }
+            else
+            {
+                //Log this with specific logger!!
+            }
+        }
+
+        private void MaterialGridView_FocusedRowChanged(object sender, FocusedRowChangedEventArgs e)
+        {
+            materialControl.DataSource = (CMaterial)MaterialGridView.GetRow(e.FocusedRowHandle);
         }
     }
 }

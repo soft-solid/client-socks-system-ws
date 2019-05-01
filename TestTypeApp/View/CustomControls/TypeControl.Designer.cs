@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.typeNameEdit = new DevExpress.XtraEditors.TextEdit();
+            this.NameLabal = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.typeNameEdit.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Type name:";
             // 
             // typeNameEdit
             // 
@@ -50,12 +41,21 @@
             this.typeNameEdit.TabIndex = 1;
             this.typeNameEdit.EditValueChanged += new System.EventHandler(this.typeNameEdit_EditValueChanged);
             // 
+            // NameLabal
+            // 
+            this.NameLabal.Location = new System.Drawing.Point(15, 7);
+            this.NameLabal.Name = "NameLabal";
+            this.NameLabal.Size = new System.Drawing.Size(53, 13);
+            this.NameLabal.TabIndex = 2;
+            this.NameLabal.Text = "Type name";
+            // 
             // TypeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.NameLabal);
             this.Controls.Add(this.typeNameEdit);
-            this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(236, 62);
             this.Name = "TypeControl";
             this.Size = new System.Drawing.Size(236, 62);
             ((System.ComponentModel.ISupportInitialize)(this.typeNameEdit.Properties)).EndInit();
@@ -66,7 +66,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit typeNameEdit;
+        private DevExpress.XtraEditors.LabelControl NameLabal;
     }
 }

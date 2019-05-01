@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using TestTypeApp.Tools.CustomBindingList;
+﻿using TestTypeApp.Tools.CustomBindingList;
 
 namespace TestTypeApp.Model.Repository
 {

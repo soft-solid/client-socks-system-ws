@@ -3,12 +3,11 @@ using System.ComponentModel;
 using TestTypeApp.Client;
 using TestTypeApp.MaterialService;
 using TestTypeApp.Tools.Loggers;
-using TestTypeApp.Tools.ExtensionMethods;
 
 
 namespace TestTypeApp.Model
 {
-    class CMaterial : Transportable<material>, INotifyPropertyChanged
+    public class CMaterial : Transportable<material>, INotifyPropertyChanged
     {
         public CMaterial()
             : base(new material())

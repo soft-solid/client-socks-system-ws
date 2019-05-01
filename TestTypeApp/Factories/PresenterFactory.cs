@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using TestTypeApp.Factories.Interfaces;
 using TestTypeApp.Model.Repository;
 using TestTypeApp.Presenter;
@@ -34,6 +29,16 @@ namespace TestTypeApp.Factories
         public IPresenter GetTypePresenter(Form MDIParent)
         {
             return new TypePresenter(new CTypeRepository(new TypeServiceClient()), new TypeEntry() { MdiParent = MDIParent });
+        }
+
+        public IPresenter GetManufacturePresenter(Form MDIParent)
+        {
+            return new ManufacturePresenter(new CManufactureRepository(new TestTypeApp.ManufactureService.ManufactureServiceClient()), new ManufactureEntry() { MdiParent = MDIParent });
+        }
+
+        public IPresenter GetMaterialPresenter(Form MDIParent)
+        {
+            return new MaterialPresenter(new CMaterialRepository(new TestTypeApp.MaterialService.MaterialServiceClient()), new MaterialEntry() { MdiParent = MDIParent });
         }
     }
 }

@@ -100,15 +100,11 @@
     <Compile Include="Model\CType.cs" />
     <Compile Include="Client\ITransportable.cs" />
     <Compile Include="Client\Transportable.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\CComposition.cs" />
     <Compile Include="Model\CManufacture.cs" />
     <Compile Include="Model\CSocks.cs" />
+    <Compile Include="Model\Repository\CManufactureRepository.cs" />
+    <Compile Include="Model\Repository\CMaterialRepository.cs" />
     <Compile Include="Model\Repository\CTypeRepository.cs" />
     <Compile Include="Model\Repository\IBaseRepositoryModel.cs" />
     <Compile Include="Presenter\IPresenter.cs" />
@@ -141,11 +137,35 @@
     <Compile Include="Tools\CustomBindingList\RemoveItemEventArgs.cs" />
     <Compile Include="Tools\Loggers\CManufactureLogger.cs" />
     <Compile Include="Tools\Loggers\CMaterialLogger.cs" />
+    <Compile Include="View\CustomControls\ManufactureControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CustomControls\ManufactureControl.Designer.cs">
+      <DependentUpon>ManufactureControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomControls\MaterialControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CustomControls\MaterialControl.Designer.cs">
+      <DependentUpon>MaterialControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Entries\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Entries\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Entries\ManufactureEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Entries\ManufactureEntry.Designer.cs">
+      <DependentUpon>ManufactureEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Entries\MaterialEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Entries\MaterialEntry.Designer.cs">
+      <DependentUpon>MaterialEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Entries\ReportForm.cs">
       <SubType>Form</SubType>
@@ -176,9 +196,6 @@
       <DependentUpon>TypeSetupControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\IBaseView.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,8 +207,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CustomControls\ManufactureControl.resx">
+      <DependentUpon>ManufactureControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CustomControls\MaterialControl.resx">
+      <DependentUpon>MaterialControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Entries\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Entries\ManufactureEntry.resx">
+      <DependentUpon>ManufactureEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Entries\MaterialEntry.resx">
+      <DependentUpon>MaterialEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Entries\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
@@ -207,6 +236,8 @@
     </EmbeddedResource>
     <None Include="log4net.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\TestTypeApp.Model.CManufacture.datasource" />
+    <None Include="Properties\DataSources\TestTypeApp.Model.CMaterial.datasource" />
     <None Include="Properties\DataSources\TestTypeApp.Model.CType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

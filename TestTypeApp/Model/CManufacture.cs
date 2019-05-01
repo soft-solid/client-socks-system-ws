@@ -3,11 +3,10 @@ using System.ComponentModel;
 using TestTypeApp.Client;
 using TestTypeApp.ManufactureService;
 using TestTypeApp.Tools.Loggers;
-using TestTypeApp.Tools.ExtensionMethods;
 
 namespace TestTypeApp.Model
 {
-    class CManufacture : Transportable<manufacture>, INotifyPropertyChanged 
+    public class CManufacture : Transportable<manufacture>, INotifyPropertyChanged 
     {
         public CManufacture()
             : base(new manufacture())

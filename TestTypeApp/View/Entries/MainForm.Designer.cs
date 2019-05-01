@@ -34,6 +34,8 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.TypebarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ManufacturesbarButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.MenuPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.EntriesribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
@@ -50,9 +52,11 @@
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
             this.TypebarButtonItem,
-            this.ManufacturesbarButtonItem});
+            this.ManufacturesbarButtonItem,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl.MaxItemId = 3;
+            this.ribbonControl.MaxItemId = 5;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.MenuPage});
@@ -74,6 +78,22 @@
             this.ManufacturesbarButtonItem.Id = 2;
             this.ManufacturesbarButtonItem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("ManufacturesbarButtonItem.LargeGlyph")));
             this.ManufacturesbarButtonItem.Name = "ManufacturesbarButtonItem";
+            this.ManufacturesbarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ManufacturesbarButtonItem_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Material";
+            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
+            this.barButtonItem1.Id = 3;
+            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 4;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // MenuPage
             // 
@@ -86,6 +106,7 @@
             // 
             this.EntriesribbonPageGroup.ItemLinks.Add(this.TypebarButtonItem);
             this.EntriesribbonPageGroup.ItemLinks.Add(this.ManufacturesbarButtonItem);
+            this.EntriesribbonPageGroup.ItemLinks.Add(this.barButtonItem1);
             this.EntriesribbonPageGroup.Name = "EntriesribbonPageGroup";
             this.EntriesribbonPageGroup.Text = "Entries";
             // 
@@ -113,5 +134,7 @@
         private DevExpress.XtraBars.BarButtonItem ManufacturesbarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage MenuPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup EntriesribbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

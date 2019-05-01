@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel;
 using TestTypeApp.Client;
-using TestTypeApp.TypeService;
 using TestTypeApp.Tools.Loggers;
-using TestTypeApp.Tools.ExtensionMethods;
+using TestTypeApp.TypeService;
 
 namespace TestTypeApp.Model
 {
