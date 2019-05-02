@@ -6,7 +6,7 @@ using TestTypeApp.View;
 
 namespace TestTypeApp.Presenter
 {
-    class ManufacturePresenter : IPresenter
+    class ManufacturePresenter : BasePresenter
     {
         private IBaseRepositoryModel<CManufacture> _repositoryModel;
         private IItemView<CManufacture> _view;
@@ -14,8 +14,8 @@ namespace TestTypeApp.Presenter
 
         public ManufacturePresenter(IBaseRepositoryModel<CManufacture> repositoryModel, IItemView<CManufacture> view)
         {
-            this._repositoryModel = repositoryModel;
-            this._view = view;
+            _repositoryModel = repositoryModel;
+            _view = view;
             repositoryModel.Reload();
             view.ItemList = repositoryModel.ItemList;
             _currentID = repositoryModel.ItemList.First().Id;
@@ -23,6 +23,7 @@ namespace TestTypeApp.Presenter
             view.RefreshView += ViewRefreshView;
             view.Save += view_Save;
             view.AddNew += view_AddNew;
+            view.Closed += ViewClosed;
             view.Show();
         }
 

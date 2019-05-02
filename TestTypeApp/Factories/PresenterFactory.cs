@@ -3,7 +3,10 @@ using TestTypeApp.Factories.Interfaces;
 using TestTypeApp.Model.Repository;
 using TestTypeApp.Presenter;
 using TestTypeApp.TypeService;
+
 using TestTypeApp.View.Entries;
+using TestTypeApp.ManufactureService;
+using TestTypeApp.MaterialService;
 
 namespace TestTypeApp.Factories
 {
@@ -33,12 +36,12 @@ namespace TestTypeApp.Factories
 
         public IPresenter GetManufacturePresenter(Form MDIParent)
         {
-            return new ManufacturePresenter(new CManufactureRepository(new TestTypeApp.ManufactureService.ManufactureServiceClient()), new ManufactureEntry() { MdiParent = MDIParent });
+            return new ManufacturePresenter(new CManufactureRepository(new ManufactureServiceClient()), new ManufactureEntry() { MdiParent = MDIParent });
         }
 
         public IPresenter GetMaterialPresenter(Form MDIParent)
         {
-            return new MaterialPresenter(new CMaterialRepository(new TestTypeApp.MaterialService.MaterialServiceClient()), new MaterialEntry() { MdiParent = MDIParent });
+            return new MaterialPresenter(new CMaterialRepository(new MaterialServiceClient()), new MaterialEntry() { MdiParent = MDIParent });
         }
     }
 }

@@ -18,54 +18,81 @@ namespace TestTypeApp.SocksService {
         // CODEGEN: Parameter 'arg0' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
-        TestTypeApp.SocksService.saveResponse save(TestTypeApp.SocksService.save request);
+        TestTypeApp.SocksService.DeleteResponse Delete(TestTypeApp.SocksService.Delete request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.saveResponse> saveAsync(TestTypeApp.SocksService.save request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.DeleteResponse> DeleteAsync(TestTypeApp.SocksService.Delete request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.SocksService.readResponse read(TestTypeApp.SocksService.read request);
+        TestTypeApp.SocksService.FindResponse Find(TestTypeApp.SocksService.Find request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.readResponse> readAsync(TestTypeApp.SocksService.read request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.FindResponse> FindAsync(TestTypeApp.SocksService.Find request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TestTypeApp.SocksService.ReadResponse Read(TestTypeApp.SocksService.Read request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadResponse> ReadAsync(TestTypeApp.SocksService.Read request);
         
         // CODEGEN: Parameter 'arg0' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
-        TestTypeApp.SocksService.deleteResponse delete(TestTypeApp.SocksService.delete request);
+        TestTypeApp.SocksService.SaveResponse Save(TestTypeApp.SocksService.Save request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.deleteResponse> deleteAsync(TestTypeApp.SocksService.delete request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.SocksService.findResponse find(TestTypeApp.SocksService.find request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.findResponse> findAsync(TestTypeApp.SocksService.find request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.SaveResponse> SaveAsync(TestTypeApp.SocksService.Save request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(composition[]))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TestTypeApp.SocksService.readAllResponse readAll(TestTypeApp.SocksService.readAll request);
+        TestTypeApp.SocksService.ReadAllResponse ReadAll(TestTypeApp.SocksService.ReadAll request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.readAllResponse> readAllAsync(TestTypeApp.SocksService.readAll request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadAllResponse> ReadAllAsync(TestTypeApp.SocksService.ReadAll request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Delete", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Delete {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public Delete() {
+        }
+        
+        public Delete(int arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="DeleteResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class DeleteResponse {
+        
+        public DeleteResponse() {
+        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -80,7 +107,7 @@ namespace TestTypeApp.SocksService {
         
         private manufacture manufactureField;
         
-        private soksType typeField;
+        private socksType typeField;
         
         private composition[] compositionsField;
         
@@ -136,7 +163,7 @@ namespace TestTypeApp.SocksService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public soksType type {
+        public socksType type {
             get {
                 return this.typeField;
             }
@@ -182,7 +209,7 @@ namespace TestTypeApp.SocksService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -242,7 +269,7 @@ namespace TestTypeApp.SocksService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -302,7 +329,7 @@ namespace TestTypeApp.SocksService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -362,12 +389,12 @@ namespace TestTypeApp.SocksService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://soap.web.courses.org/")]
-    public partial class soksType : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class socksType : object, System.ComponentModel.INotifyPropertyChanged {
         
         private bool activeField;
         
@@ -424,109 +451,17 @@ namespace TestTypeApp.SocksService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="save", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class save {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TestTypeApp.SocksService.socks[] arg0;
-        
-        public save() {
-        }
-        
-        public save(TestTypeApp.SocksService.socks[] arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class saveResponse {
-        
-        public saveResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="read", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class read {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public read() {
-        }
-        
-        public read(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TestTypeApp.SocksService.socks @return;
-        
-        public readResponse() {
-        }
-        
-        public readResponse(TestTypeApp.SocksService.socks @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="delete", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class delete {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int arg0;
-        
-        public delete() {
-        }
-        
-        public delete(int arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="deleteResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class deleteResponse {
-        
-        public deleteResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="find", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class find {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Find", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Find {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg0;
         
-        public find() {
+        public Find() {
         }
         
-        public find(string arg0) {
+        public Find(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -534,17 +469,17 @@ namespace TestTypeApp.SocksService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="findResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class findResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="FindResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class FindResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public TestTypeApp.SocksService.socks[] @return;
         
-        public findResponse() {
+        public FindResponse() {
         }
         
-        public findResponse(TestTypeApp.SocksService.socks[] @return) {
+        public FindResponse(TestTypeApp.SocksService.socks[] @return) {
             this.@return = @return;
         }
     }
@@ -552,27 +487,99 @@ namespace TestTypeApp.SocksService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readAll {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Read", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Read {
         
-        public readAll() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int arg0;
+        
+        public Read() {
+        }
+        
+        public Read(int arg0) {
+            this.arg0 = arg0;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="readAllResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
-    public partial class readAllResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReadResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class ReadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TestTypeApp.SocksService.socks @return;
+        
+        public ReadResponse() {
+        }
+        
+        public ReadResponse(TestTypeApp.SocksService.socks @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="Save", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class Save {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TestTypeApp.SocksService.socks[] arg0;
+        
+        public Save() {
+        }
+        
+        public Save(TestTypeApp.SocksService.socks[] arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="SaveResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class SaveResponse {
+        
+        public SaveResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class ReadAll {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool arg0;
+        
+        public ReadAll() {
+        }
+        
+        public ReadAll(bool arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAllResponse", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
+    public partial class ReadAllResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public TestTypeApp.SocksService.socks[] @return;
         
-        public readAllResponse() {
+        public ReadAllResponse() {
         }
         
-        public readAllResponse(TestTypeApp.SocksService.socks[] @return) {
+        public ReadAllResponse(TestTypeApp.SocksService.socks[] @return) {
             this.@return = @return;
         }
     }
@@ -605,114 +612,116 @@ namespace TestTypeApp.SocksService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.SocksService.saveResponse TestTypeApp.SocksService.SocksService.save(TestTypeApp.SocksService.save request) {
-            return base.Channel.save(request);
+        TestTypeApp.SocksService.DeleteResponse TestTypeApp.SocksService.SocksService.Delete(TestTypeApp.SocksService.Delete request) {
+            return base.Channel.Delete(request);
         }
         
-        public void save(TestTypeApp.SocksService.socks[] arg0) {
-            TestTypeApp.SocksService.save inValue = new TestTypeApp.SocksService.save();
+        public void Delete(int arg0) {
+            TestTypeApp.SocksService.Delete inValue = new TestTypeApp.SocksService.Delete();
             inValue.arg0 = arg0;
-            TestTypeApp.SocksService.saveResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).save(inValue);
+            TestTypeApp.SocksService.DeleteResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).Delete(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.saveResponse> TestTypeApp.SocksService.SocksService.saveAsync(TestTypeApp.SocksService.save request) {
-            return base.Channel.saveAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.DeleteResponse> TestTypeApp.SocksService.SocksService.DeleteAsync(TestTypeApp.SocksService.Delete request) {
+            return base.Channel.DeleteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.SocksService.saveResponse> saveAsync(TestTypeApp.SocksService.socks[] arg0) {
-            TestTypeApp.SocksService.save inValue = new TestTypeApp.SocksService.save();
+        public System.Threading.Tasks.Task<TestTypeApp.SocksService.DeleteResponse> DeleteAsync(int arg0) {
+            TestTypeApp.SocksService.Delete inValue = new TestTypeApp.SocksService.Delete();
             inValue.arg0 = arg0;
-            return ((TestTypeApp.SocksService.SocksService)(this)).saveAsync(inValue);
+            return ((TestTypeApp.SocksService.SocksService)(this)).DeleteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.SocksService.readResponse TestTypeApp.SocksService.SocksService.read(TestTypeApp.SocksService.read request) {
-            return base.Channel.read(request);
+        TestTypeApp.SocksService.FindResponse TestTypeApp.SocksService.SocksService.Find(TestTypeApp.SocksService.Find request) {
+            return base.Channel.Find(request);
         }
         
-        public TestTypeApp.SocksService.socks read(int arg0) {
-            TestTypeApp.SocksService.read inValue = new TestTypeApp.SocksService.read();
+        public TestTypeApp.SocksService.socks[] Find(string arg0) {
+            TestTypeApp.SocksService.Find inValue = new TestTypeApp.SocksService.Find();
             inValue.arg0 = arg0;
-            TestTypeApp.SocksService.readResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).read(inValue);
+            TestTypeApp.SocksService.FindResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).Find(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.readResponse> TestTypeApp.SocksService.SocksService.readAsync(TestTypeApp.SocksService.read request) {
-            return base.Channel.readAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.FindResponse> TestTypeApp.SocksService.SocksService.FindAsync(TestTypeApp.SocksService.Find request) {
+            return base.Channel.FindAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.SocksService.readResponse> readAsync(int arg0) {
-            TestTypeApp.SocksService.read inValue = new TestTypeApp.SocksService.read();
+        public System.Threading.Tasks.Task<TestTypeApp.SocksService.FindResponse> FindAsync(string arg0) {
+            TestTypeApp.SocksService.Find inValue = new TestTypeApp.SocksService.Find();
             inValue.arg0 = arg0;
-            return ((TestTypeApp.SocksService.SocksService)(this)).readAsync(inValue);
+            return ((TestTypeApp.SocksService.SocksService)(this)).FindAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.SocksService.deleteResponse TestTypeApp.SocksService.SocksService.delete(TestTypeApp.SocksService.delete request) {
-            return base.Channel.delete(request);
+        TestTypeApp.SocksService.ReadResponse TestTypeApp.SocksService.SocksService.Read(TestTypeApp.SocksService.Read request) {
+            return base.Channel.Read(request);
         }
         
-        public void delete(int arg0) {
-            TestTypeApp.SocksService.delete inValue = new TestTypeApp.SocksService.delete();
+        public TestTypeApp.SocksService.socks Read(int arg0) {
+            TestTypeApp.SocksService.Read inValue = new TestTypeApp.SocksService.Read();
             inValue.arg0 = arg0;
-            TestTypeApp.SocksService.deleteResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).delete(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.deleteResponse> TestTypeApp.SocksService.SocksService.deleteAsync(TestTypeApp.SocksService.delete request) {
-            return base.Channel.deleteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TestTypeApp.SocksService.deleteResponse> deleteAsync(int arg0) {
-            TestTypeApp.SocksService.delete inValue = new TestTypeApp.SocksService.delete();
-            inValue.arg0 = arg0;
-            return ((TestTypeApp.SocksService.SocksService)(this)).deleteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.SocksService.findResponse TestTypeApp.SocksService.SocksService.find(TestTypeApp.SocksService.find request) {
-            return base.Channel.find(request);
-        }
-        
-        public TestTypeApp.SocksService.socks[] find(string arg0) {
-            TestTypeApp.SocksService.find inValue = new TestTypeApp.SocksService.find();
-            inValue.arg0 = arg0;
-            TestTypeApp.SocksService.findResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).find(inValue);
+            TestTypeApp.SocksService.ReadResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).Read(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.findResponse> TestTypeApp.SocksService.SocksService.findAsync(TestTypeApp.SocksService.find request) {
-            return base.Channel.findAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadResponse> TestTypeApp.SocksService.SocksService.ReadAsync(TestTypeApp.SocksService.Read request) {
+            return base.Channel.ReadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.SocksService.findResponse> findAsync(string arg0) {
-            TestTypeApp.SocksService.find inValue = new TestTypeApp.SocksService.find();
+        public System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadResponse> ReadAsync(int arg0) {
+            TestTypeApp.SocksService.Read inValue = new TestTypeApp.SocksService.Read();
             inValue.arg0 = arg0;
-            return ((TestTypeApp.SocksService.SocksService)(this)).findAsync(inValue);
+            return ((TestTypeApp.SocksService.SocksService)(this)).ReadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TestTypeApp.SocksService.readAllResponse TestTypeApp.SocksService.SocksService.readAll(TestTypeApp.SocksService.readAll request) {
-            return base.Channel.readAll(request);
+        TestTypeApp.SocksService.SaveResponse TestTypeApp.SocksService.SocksService.Save(TestTypeApp.SocksService.Save request) {
+            return base.Channel.Save(request);
         }
         
-        public TestTypeApp.SocksService.socks[] readAll() {
-            TestTypeApp.SocksService.readAll inValue = new TestTypeApp.SocksService.readAll();
-            TestTypeApp.SocksService.readAllResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).readAll(inValue);
+        public void Save(TestTypeApp.SocksService.socks[] arg0) {
+            TestTypeApp.SocksService.Save inValue = new TestTypeApp.SocksService.Save();
+            inValue.arg0 = arg0;
+            TestTypeApp.SocksService.SaveResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).Save(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.SaveResponse> TestTypeApp.SocksService.SocksService.SaveAsync(TestTypeApp.SocksService.Save request) {
+            return base.Channel.SaveAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TestTypeApp.SocksService.SaveResponse> SaveAsync(TestTypeApp.SocksService.socks[] arg0) {
+            TestTypeApp.SocksService.Save inValue = new TestTypeApp.SocksService.Save();
+            inValue.arg0 = arg0;
+            return ((TestTypeApp.SocksService.SocksService)(this)).SaveAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TestTypeApp.SocksService.ReadAllResponse TestTypeApp.SocksService.SocksService.ReadAll(TestTypeApp.SocksService.ReadAll request) {
+            return base.Channel.ReadAll(request);
+        }
+        
+        public TestTypeApp.SocksService.socks[] ReadAll(bool arg0) {
+            TestTypeApp.SocksService.ReadAll inValue = new TestTypeApp.SocksService.ReadAll();
+            inValue.arg0 = arg0;
+            TestTypeApp.SocksService.ReadAllResponse retVal = ((TestTypeApp.SocksService.SocksService)(this)).ReadAll(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TestTypeApp.SocksService.readAllResponse> TestTypeApp.SocksService.SocksService.readAllAsync(TestTypeApp.SocksService.readAll request) {
-            return base.Channel.readAllAsync(request);
+        System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadAllResponse> TestTypeApp.SocksService.SocksService.ReadAllAsync(TestTypeApp.SocksService.ReadAll request) {
+            return base.Channel.ReadAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.SocksService.readAllResponse> readAllAsync() {
-            TestTypeApp.SocksService.readAll inValue = new TestTypeApp.SocksService.readAll();
-            return ((TestTypeApp.SocksService.SocksService)(this)).readAllAsync(inValue);
+        public System.Threading.Tasks.Task<TestTypeApp.SocksService.ReadAllResponse> ReadAllAsync(bool arg0) {
+            TestTypeApp.SocksService.ReadAll inValue = new TestTypeApp.SocksService.ReadAll();
+            inValue.arg0 = arg0;
+            return ((TestTypeApp.SocksService.SocksService)(this)).ReadAllAsync(inValue);
         }
     }
 }

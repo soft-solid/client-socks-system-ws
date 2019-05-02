@@ -51,7 +51,7 @@ namespace TestTypeApp.Model.Repository
             _toDelete.Clear();
             _toSave.Clear();
             _materials.Clear();
-            _converter.toClientType(_service.ReadAll())
+            _converter.toClientType(_service.ReadAll(true))
                       .ForEach(n => _materials.Add(n));
             _materials.ListChanged += Materials_ListChanged;
         }

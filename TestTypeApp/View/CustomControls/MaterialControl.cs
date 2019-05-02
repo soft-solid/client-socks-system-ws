@@ -13,6 +13,19 @@ namespace TestTypeApp.View.CustomControls
         }
 
         CMaterial _material;
+        
+        private void materailNameEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            _material.Name = materailNameEdit.Text;
+        }
+
+        private void material_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Name")
+                materailNameEdit.Text = _material.Name;
+            else
+                throw new NotImplementedException("Unsupported property: " + e.PropertyName);
+        }
 
         public CMaterial DataSource
         {
@@ -31,19 +44,6 @@ namespace TestTypeApp.View.CustomControls
                 _material.PropertyChanged += material_PropertyChanged;
             }
             get { return _material; }
-        }
-
-        private void materailNameEdit_EditValueChanged(object sender, EventArgs e)
-        {
-            _material.Name = materailNameEdit.Text;
-        }
-
-        private void material_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "Name")
-                materailNameEdit.Text = _material.Name;
-            else
-                throw new NotImplementedException("Unsupported property: " + e.PropertyName);
         }
     }
 }

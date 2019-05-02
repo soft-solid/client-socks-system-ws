@@ -1,10 +1,11 @@
-﻿using TestTypeApp.Model;
+﻿using log4net;
+using TestTypeApp.Model;
 
 namespace TestTypeApp.Tools.Loggers
 {
     class CTypeLogger
     {
-        private static log4net.ILog _log = log4net.LogManager.GetLogger(typeof(CType));
+        private static ILog _log = LogManager.GetLogger(typeof(CType));
         private static CTypeLogger _instance = null;
         private static readonly object padlock = new object();
 
@@ -16,7 +17,7 @@ namespace TestTypeApp.Tools.Loggers
                 {
                     if (_instance != null) return _instance;
 
-                    _log = log4net.LogManager.GetLogger(typeof(CType));
+                    _log = LogManager.GetLogger(typeof(CType));
                     _instance = new CTypeLogger();
 
                     return _instance;
@@ -24,9 +25,9 @@ namespace TestTypeApp.Tools.Loggers
             }
         }
 
-        public void Info()
+        public void Info(CType obj)
         {
-
+           
         }
 
         public void Error(CType obj)
@@ -36,7 +37,7 @@ namespace TestTypeApp.Tools.Loggers
 
         public void Debug()
         {
-
+            
         }
     }
 }

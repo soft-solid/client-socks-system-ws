@@ -33,8 +33,8 @@ namespace TestTypeApp.Model.Repository
                 _toSave[_toSave.IndexOf(_types[e.NewIndex])] = _types[e.NewIndex];
             }
             else if ((e.ListChangedType == ListChangedType.ItemAdded ||
-                     !_toSave.Exists(x => x == _types[e.NewIndex])) &&
-                     e.ListChangedType != ListChangedType.ItemDeleted)
+                     !_toSave.Exists(x => x == _types[e.NewIndex]))/* &&
+                     e.ListChangedType != ListChangedType.ItemDeleted*/)
             {
                 _toSave.Add(_types[e.NewIndex]);
             }
@@ -42,7 +42,7 @@ namespace TestTypeApp.Model.Repository
 
         private void types_ListRemove(object sender, RemoveItemEventArgs e)
         {
-            _toDelete.Add(((CType) e.RemovedItem).Id);
+            _toDelete.Add(((CType)e.RemovedItem).Id);
         }
 
         public void Reload()
@@ -51,7 +51,7 @@ namespace TestTypeApp.Model.Repository
             _toDelete.Clear();
             _toSave.Clear();
             _types.Clear();
-            _converter.toClientType(_service.ReadAll())
+            _converter.toClientType(_service.ReadAll(true))
                       .ForEach(n => _types.Add(n));
             _types.ListChanged += types_ListChanged;
         }

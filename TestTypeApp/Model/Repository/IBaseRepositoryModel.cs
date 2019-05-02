@@ -2,7 +2,7 @@
 
 namespace TestTypeApp.Model.Repository
 {
-    interface IBaseRepositoryModel<TClietType> 
+    interface IBaseRepositoryModel<TClietType>
     {
         void Save();
         void Reload();

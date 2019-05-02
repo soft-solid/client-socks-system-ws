@@ -14,25 +14,6 @@ namespace TestTypeApp.View
 
         CType _type;
 
-        public CType DataSource
-        {
-            set
-            {
-                if (value == null || _type == value) 
-                    return;
-
-                if (_type != null) 
-                    _type.PropertyChanged -= type_PropertyChanged;
-
-                typeNameEdit.EditValueChanged -= typeNameEdit_EditValueChanged;
-                _type = value;
-                typeNameEdit.Text = _type.Name;
-                typeNameEdit.EditValueChanged += typeNameEdit_EditValueChanged;
-                _type.PropertyChanged += type_PropertyChanged;
-            }
-            get { return _type; }
-        }
-
         private void type_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == "Name")
@@ -44,6 +25,25 @@ namespace TestTypeApp.View
         private void typeNameEdit_EditValueChanged(object sender, EventArgs e)
         {
             _type.Name = typeNameEdit.Text;
+        }
+
+        public CType DataSource
+        {
+            set
+            {
+                if (value == null || _type == value)
+                    return;
+
+                if (_type != null)
+                    _type.PropertyChanged -= type_PropertyChanged;
+
+                typeNameEdit.EditValueChanged -= typeNameEdit_EditValueChanged;
+                _type = value;
+                typeNameEdit.Text = _type.Name;
+                typeNameEdit.EditValueChanged += typeNameEdit_EditValueChanged;
+                _type.PropertyChanged += type_PropertyChanged;
+            }
+            get { return _type; }
         }
     }
 }

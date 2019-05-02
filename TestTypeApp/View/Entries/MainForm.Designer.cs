@@ -34,7 +34,7 @@
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.TypebarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.ManufacturesbarButtonItem = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.MaterialsbarButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.MenuPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.EntriesribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -53,7 +53,7 @@
             this.ribbonControl.ExpandCollapseItem,
             this.TypebarButtonItem,
             this.ManufacturesbarButtonItem,
-            this.barButtonItem1,
+            this.MaterialsbarButtonItem,
             this.barButtonItem2});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.MaxItemId = 5;
@@ -80,14 +80,14 @@
             this.ManufacturesbarButtonItem.Name = "ManufacturesbarButtonItem";
             this.ManufacturesbarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ManufacturesbarButtonItem_ItemClick);
             // 
-            // barButtonItem1
+            // MaterialsbarButtonItem
             // 
-            this.barButtonItem1.Caption = "Material";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 3;
-            this.barButtonItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.LargeGlyph")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.MaterialsbarButtonItem.Caption = "Materials";
+            this.MaterialsbarButtonItem.Glyph = ((System.Drawing.Image)(resources.GetObject("MaterialsbarButtonItem.Glyph")));
+            this.MaterialsbarButtonItem.Id = 3;
+            this.MaterialsbarButtonItem.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("MaterialsbarButtonItem.LargeGlyph")));
+            this.MaterialsbarButtonItem.Name = "MaterialsbarButtonItem";
+            this.MaterialsbarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.MaterialsbarButtonItem_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -106,7 +106,7 @@
             // 
             this.EntriesribbonPageGroup.ItemLinks.Add(this.TypebarButtonItem);
             this.EntriesribbonPageGroup.ItemLinks.Add(this.ManufacturesbarButtonItem);
-            this.EntriesribbonPageGroup.ItemLinks.Add(this.barButtonItem1);
+            this.EntriesribbonPageGroup.ItemLinks.Add(this.MaterialsbarButtonItem);
             this.EntriesribbonPageGroup.Name = "EntriesribbonPageGroup";
             this.EntriesribbonPageGroup.Text = "Entries";
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.ribbonControl);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Sock\'s tracking";
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
             this.ResumeLayout(false);
@@ -134,7 +134,7 @@
         private DevExpress.XtraBars.BarButtonItem ManufacturesbarButtonItem;
         private DevExpress.XtraBars.Ribbon.RibbonPage MenuPage;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup EntriesribbonPageGroup;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem MaterialsbarButtonItem;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

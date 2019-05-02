@@ -107,6 +107,7 @@
     <Compile Include="Model\Repository\CMaterialRepository.cs" />
     <Compile Include="Model\Repository\CTypeRepository.cs" />
     <Compile Include="Model\Repository\IBaseRepositoryModel.cs" />
+    <Compile Include="Presenter\BasePresenter.cs" />
     <Compile Include="Presenter\IPresenter.cs" />
     <Compile Include="Presenter\ManufacturePresenter.cs" />
     <Compile Include="Presenter\MaterialPresenter.cs" />
@@ -174,7 +175,6 @@
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="REST\TestRestClient.cs" />
-    <Compile Include="Tools\ExtensionMethods\GetNameExtentions.cs" />
     <Compile Include="Tools\Loggers\CTypeLogger.cs" />
     <Compile Include="View\Entries\TypeEntry.cs">
       <SubType>Form</SubType>
@@ -188,12 +188,6 @@
     </Compile>
     <Compile Include="View\CustomControls\TypeControl.Designer.cs">
       <DependentUpon>TypeControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\CustomControls\TypeSetupControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\CustomControls\TypeSetupControl.Designer.cs">
-      <DependentUpon>TypeSetupControl.cs</DependentUpon>
     </Compile>
     <Compile Include="View\IBaseView.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -227,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\CustomControls\TypeControl.resx">
       <DependentUpon>TypeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\CustomControls\TypeSetupControl.resx">
-      <DependentUpon>TypeSetupControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Entries\TypeEntry.resx">
       <DependentUpon>TypeEntry.cs</DependentUpon>
@@ -281,19 +272,19 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SocksService\SocksService.wsdl" />
-    <None Include="Service References\SocksService\TestTypeApp.SocksService.deleteResponse.datasource">
+    <None Include="Service References\SocksService\TestTypeApp.SocksService.DeleteResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SocksService\TestTypeApp.SocksService.findResponse.datasource">
+    <None Include="Service References\SocksService\TestTypeApp.SocksService.FindResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SocksService\TestTypeApp.SocksService.readAllResponse.datasource">
+    <None Include="Service References\SocksService\TestTypeApp.SocksService.ReadAllResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SocksService\TestTypeApp.SocksService.readResponse.datasource">
+    <None Include="Service References\SocksService\TestTypeApp.SocksService.ReadResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\SocksService\TestTypeApp.SocksService.saveResponse.datasource">
+    <None Include="Service References\SocksService\TestTypeApp.SocksService.SaveResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\SocksService\TestTypeApp.SocksService.socks.datasource">

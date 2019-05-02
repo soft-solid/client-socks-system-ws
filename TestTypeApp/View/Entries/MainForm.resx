@@ -249,7 +249,7 @@
         UVnFoWBr+TznI5VPNdUJyXP+R5GkfwMPT3OfchuhBQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="barButtonItem1.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MaterialsbarButtonItem.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAWdEVYdFRpdGxlAFBhZ2U7UGFwZXI7U2l6ZTu9LxKeAAACh0lEQVQ4T02T2U5TURSGV0QEQUAf
@@ -266,7 +266,7 @@
         Ag6bQKm0QLQmWgS0ZRqxCzcVn5VduAX4TH8B13NKGHTQD0UAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="barButtonItem1.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MaterialsbarButtonItem.LargeGlyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAWdEVYdFRpdGxlAFBhZ2U7UGFwZXI7U2l6ZTu9LxKeAAAHEklEQVRYR62WiW8UZRjGR1HAA0FU

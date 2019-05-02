@@ -233,7 +233,15 @@ namespace TestTypeApp.ManufactureService {
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
     public partial class ReadAll {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool arg0;
+        
         public ReadAll() {
+        }
+        
+        public ReadAll(bool arg0) {
+            this.arg0 = arg0;
         }
     }
     
@@ -332,8 +340,9 @@ namespace TestTypeApp.ManufactureService {
             return base.Channel.ReadAll(request);
         }
         
-        public TestTypeApp.ManufactureService.manufacture[] ReadAll() {
+        public TestTypeApp.ManufactureService.manufacture[] ReadAll(bool arg0) {
             TestTypeApp.ManufactureService.ReadAll inValue = new TestTypeApp.ManufactureService.ReadAll();
+            inValue.arg0 = arg0;
             TestTypeApp.ManufactureService.ReadAllResponse retVal = ((TestTypeApp.ManufactureService.ManufactureService)(this)).ReadAll(inValue);
             return retVal.@return;
         }
@@ -343,8 +352,9 @@ namespace TestTypeApp.ManufactureService {
             return base.Channel.ReadAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.ManufactureService.ReadAllResponse> ReadAllAsync() {
+        public System.Threading.Tasks.Task<TestTypeApp.ManufactureService.ReadAllResponse> ReadAllAsync(bool arg0) {
             TestTypeApp.ManufactureService.ReadAll inValue = new TestTypeApp.ManufactureService.ReadAll();
+            inValue.arg0 = arg0;
             return ((TestTypeApp.ManufactureService.ManufactureService)(this)).ReadAllAsync(inValue);
         }
     }

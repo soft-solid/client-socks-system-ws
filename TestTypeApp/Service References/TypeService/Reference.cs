@@ -71,7 +71,7 @@ namespace TestTypeApp.TypeService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -131,7 +131,7 @@ namespace TestTypeApp.TypeService {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -233,7 +233,15 @@ namespace TestTypeApp.TypeService {
     [System.ServiceModel.MessageContractAttribute(WrapperName="ReadAll", WrapperNamespace="http://soap.web.courses.org/", IsWrapped=true)]
     public partial class ReadAll {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://soap.web.courses.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool arg0;
+        
         public ReadAll() {
+        }
+        
+        public ReadAll(bool arg0) {
+            this.arg0 = arg0;
         }
     }
     
@@ -332,8 +340,9 @@ namespace TestTypeApp.TypeService {
             return base.Channel.ReadAll(request);
         }
         
-        public TestTypeApp.TypeService.socksType[] ReadAll() {
+        public TestTypeApp.TypeService.socksType[] ReadAll(bool arg0) {
             TestTypeApp.TypeService.ReadAll inValue = new TestTypeApp.TypeService.ReadAll();
+            inValue.arg0 = arg0;
             TestTypeApp.TypeService.ReadAllResponse retVal = ((TestTypeApp.TypeService.TypeService)(this)).ReadAll(inValue);
             return retVal.@return;
         }
@@ -343,8 +352,9 @@ namespace TestTypeApp.TypeService {
             return base.Channel.ReadAllAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TestTypeApp.TypeService.ReadAllResponse> ReadAllAsync() {
+        public System.Threading.Tasks.Task<TestTypeApp.TypeService.ReadAllResponse> ReadAllAsync(bool arg0) {
             TestTypeApp.TypeService.ReadAll inValue = new TestTypeApp.TypeService.ReadAll();
+            inValue.arg0 = arg0;
             return ((TestTypeApp.TypeService.TypeService)(this)).ReadAllAsync(inValue);
         }
     }

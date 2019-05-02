@@ -145,7 +145,7 @@
             this.RefreshButton.StyleController = this.TypeEntryConvertedLayout;
             this.RefreshButton.TabIndex = 5;
             this.RefreshButton.Text = "Refresh";
-            this.RefreshButton.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // DeleteButton
             // 

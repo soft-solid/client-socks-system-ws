@@ -56,7 +56,6 @@ namespace TestTypeApp.View.Entries
         {
             MaterialGridView.DeleteSelectedRows();
             materialControl.DataSource = (CMaterial)MaterialGridView.GetRow(MaterialGridView.FocusedRowHandle);
-
         }
 
         private void RefreshButton_Click(object sender, EventArgs e)

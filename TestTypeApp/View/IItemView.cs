@@ -10,6 +10,7 @@ namespace TestTypeApp.View
         event EventHandler<EventArgs> RefreshView;
         event EventHandler<EventArgs> Save;
         event EventHandler<EventArgs> AddNew;
+        event EventHandler Closed;
 
         IList<TClientType> ItemList { set; }
         TClientType CurrentItem { get; set; }

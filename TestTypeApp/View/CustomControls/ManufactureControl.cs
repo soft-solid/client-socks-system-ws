@@ -12,7 +12,7 @@ namespace TestTypeApp.View.CustomControls
             InitializeComponent();
         }
 
-        private CManufacture _manufacture;
+        CManufacture _manufacture;
 
         private void manufactureNameEdit_EditValueChanged(object sender, EventArgs e)
         {

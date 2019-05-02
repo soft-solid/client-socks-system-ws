@@ -6,8 +6,7 @@ namespace TestTypeApp.View.Entries
 {
     public partial class MainForm : Form
     {
-        private readonly IPresenterFactory _presenterFactory;
-        
+        readonly IPresenterFactory _presenterFactory;
         public MainForm()
         {
             InitializeComponent();
@@ -21,18 +20,24 @@ namespace TestTypeApp.View.Entries
 
         private void TypebarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             IPresenter typePresenter = _presenterFactory.GetTypePresenter(this);
-            //TypebarButtonItem.Enabled = false;
+            TypebarButtonItem.Enabled = false;
+            typePresenter.FormClosing += (o, i) => TypebarButtonItem.Enabled = true;
         }
 
         private void ManufacturesbarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             IPresenter manufacturePresenter = _presenterFactory.GetManufacturePresenter(this);
+            ManufacturesbarButtonItem.Enabled = false;
+            manufacturePresenter.FormClosing += (o, i) => ManufacturesbarButtonItem.Enabled = true;
         }
 
-        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void MaterialsbarButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             IPresenter materialPresenter = _presenterFactory.GetMaterialPresenter(this);
+            MaterialsbarButtonItem.Enabled = false;
+            materialPresenter.FormClosing += (o, i) => MaterialsbarButtonItem.Enabled = true;
         }
     }
 }

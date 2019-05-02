@@ -28,18 +28,6 @@ namespace TestTypeApp.View.Entries
             set { typeControl.DataSource = value; }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            if (RefreshView != null)
-            {
-                RefreshView(this, EventArgs.Empty);
-            }
-            else
-            {
-                //Log this with specific logger!!
-            }
-        }
-
         private void NewButton_Click(object sender, EventArgs e)
         {
             if (AddNew != null)
@@ -64,6 +52,18 @@ namespace TestTypeApp.View.Entries
             }
         }
 
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            if (RefreshView != null)
+            {
+                RefreshView(this, EventArgs.Empty);
+            }
+            else
+            {
+                //Log this with specific logger!!
+            }
+        }
+
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             TypegridView.DeleteSelectedRows();
@@ -74,5 +74,7 @@ namespace TestTypeApp.View.Entries
         {
             typeControl.DataSource = (CType)TypegridView.GetRow(e.FocusedRowHandle);
         }
+
+        
     }
 }

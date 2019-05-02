@@ -297,7 +297,7 @@
             this.ClientSize = new System.Drawing.Size(856, 305);
             this.Controls.Add(this.ManufactureEntryConvertedLayout);
             this.Name = "ManufactureEntry";
-            this.Text = "ManufactureEntry";
+            this.Text = "Manufactures";
             ((System.ComponentModel.ISupportInitialize)(this.ManufactureGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cManufactureBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ManufactureGridView)).EndInit();
